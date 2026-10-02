@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interiores Nur</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Interiores Nur</h1>
+        <p>Estudio de interiorismo</p>
+    </header>
+
+    <main>
+        <h2>Diseñamos espacios que inspiran</h2>
+        <p>Proyectos de interiorismo personalizados.</p>
+    </main>
+
+</body>
+</html>
