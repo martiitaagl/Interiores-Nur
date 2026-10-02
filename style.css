@@ -47,10 +47,8 @@ nav a {
 
 .hero {
   min-height: 85vh;
-
   display: flex;
   align-items: center;
-
   padding: 8%;
 
   background:
@@ -92,14 +90,10 @@ nav a {
 
 .button {
   display: inline-block;
-
   padding: 15px 28px;
-
   background: white;
   color: #222;
-
   text-decoration: none;
-
   font-size: 14px;
 }
 
@@ -130,24 +124,18 @@ nav a {
 
 .project-grid {
   margin-top: 60px;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   gap: 20px;
 }
 
 .project {
   height: 550px;
-
   background-size: cover;
   background-position: center;
-
   display: flex;
   align-items: flex-end;
-
   padding: 25px;
-
   color: white;
 }
 
@@ -192,12 +180,9 @@ nav a {
 
 .studio {
   min-height: 700px;
-
   display: flex;
   align-items: center;
-
   padding: 8%;
-
   background: #d8d0c4;
 }
 
@@ -207,7 +192,6 @@ nav a {
 
 .studio-text > p:last-child {
   max-width: 650px;
-
   font-size: 18px;
   line-height: 1.7;
 }
@@ -235,12 +219,9 @@ nav a {
 footer {
   display: flex;
   justify-content: space-between;
-
   padding: 35px 6%;
-
   background: #222;
   color: white;
-
   font-size: 13px;
 }
 
