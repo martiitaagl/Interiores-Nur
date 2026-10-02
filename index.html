@@ -1,214 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>NUR INTERIORES</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- CABECERA -->
-
-  <header class="navbar">
-
-    <a href="#inicio" class="logo">
-      <span class="logo-nur">NUR</span>
-      <span class="logo-interiores">INTERIORES</span>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <span class="brand-main">NUR</span>
+      <span class="brand-sub">INTERIORES</span>
     </a>
 
-    <nav>
+    <nav class="main-nav">
       <a href="#inicio">INICIO</a>
       <a href="#proyectos">PROYECTOS</a>
       <a href="#estudio">ESTUDIO</a>
       <a href="#contacto">CONTACTO</a>
     </nav>
-
   </header>
 
+  <main>
 
-  <!-- PORTADA -->
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <p class="eyebrow">ESTUDIO DE INTERIORISMO</p>
 
-  <section class="hero" id="inicio">
+        <h1>
+          ESPACIOS QUE NACEN<br>
+          DE LA FORMA DE VIVIR.
+        </h1>
 
-    <div class="hero-content">
+        <p class="hero-description">
+          Interiorismo contemporáneo, cálido y funcional.
+          Diseñamos espacios serenos a través de la luz,
+          los materiales y la calma visual.
+        </p>
 
-      <p class="section-label">
-        ESTUDIO DE INTERIORISMO
-      </p>
+        <a href="#proyectos" class="button">VER PROYECTOS</a>
+      </div>
 
-      <h1>
-        ESPACIOS QUE NACEN<br>
-        DE LA FORMA DE VIVIR.
-      </h1>
+      <div class="hero-image"></div>
+    </section>
 
-      <p class="hero-text">
-        Interiorismo y diseño de espacios contemporáneos,
-        cálidos y funcionales.
-      </p>
+    <section class="intro-block">
+      <div class="intro-left">
+        <p class="eyebrow">NUEVAS PROPUESTAS</p>
+        <h2>SIMPLICIDAD EN CADA DETALLE.</h2>
+      </div>
 
-      <a href="#proyectos" class="button">
-        VER PROYECTOS
-      </a>
+      <div class="intro-right">
+        <p>
+          La identidad de NUR se construye a través de materiales nobles,
+          tonos cálidos y una estética atemporal que transmite serenidad.
+        </p>
+      </div>
+    </section>
 
-    </div>
-
-  </section>
-
-
-  <!-- PROYECTOS -->
-
-  <section class="projects" id="proyectos">
-
-    <div class="section-heading">
-
-      <p class="section-label">
-        PROYECTOS DESTACADOS
-      </p>
-
-      <h2>
-        ESPACIOS CON IDENTIDAD
-      </h2>
-
-    </div>
-
-
-    <div class="project-grid">
-
-      <article class="project-card">
-
-        <div class="project-image project1">
-          <span class="project-number">01</span>
+    <section class="projects" id="proyectos">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">PROYECTOS</p>
+          <h2>ESPACIOS CON IDENTIDAD</h2>
         </div>
 
-        <div class="project-info">
-          <h3>CASA MEDITERRÁNEA</h3>
-          <p>Valencia</p>
-        </div>
+        <a href="#contacto" class="text-link">CONSULTAR PROYECTO →</a>
+      </div>
 
-      </article>
+      <div class="project-grid">
 
+        <a href="proyectos/casa-mediterranea.html" class="project-card">
+          <div class="project-image project-1"></div>
+          <div class="project-info">
+            <span class="project-number">01</span>
+            <h3>CASA MEDITERRÁNEA</h3>
+            <p>Valencia · Vivienda</p>
+          </div>
+        </a>
 
-      <article class="project-card">
+        <a href="proyectos/apartamento-centro.html" class="project-card">
+          <div class="project-image project-2"></div>
+          <div class="project-info">
+            <span class="project-number">02</span>
+            <h3>APARTAMENTO CENTRO</h3>
+            <p>Valencia · Reforma integral</p>
+          </div>
+        </a>
 
-        <div class="project-image project2">
-          <span class="project-number">02</span>
-        </div>
+        <a href="proyectos/vivienda-natural.html" class="project-card">
+          <div class="project-image project-3"></div>
+          <div class="project-info">
+            <span class="project-number">03</span>
+            <h3>VIVIENDA NATURAL</h3>
+            <p>Alicante · Interiorismo</p>
+          </div>
+        </a>
 
-        <div class="project-info">
-          <h3>APARTAMENTO CENTRO</h3>
-          <p>Valencia</p>
-        </div>
+      </div>
+    </section>
 
-      </article>
+    <section class="philosophy">
+      <div class="philosophy-text">
+        <p class="eyebrow">NUESTRA FILOSOFÍA</p>
+        <h2>DISEÑO CON PROPÓSITO.</h2>
+        <p>
+          Entendemos el interiorismo como una combinación entre funcionalidad,
+          belleza, materialidad y bienestar. Creamos espacios pensados para durar.
+        </p>
+        <a href="#estudio" class="text-link light">SABER MÁS →</a>
+      </div>
 
+      <div class="philosophy-image"></div>
+    </section>
 
-      <article class="project-card">
-
-        <div class="project-image project3">
-          <span class="project-number">03</span>
-        </div>
-
-        <div class="project-info">
-          <h3>VIVIENDA NATURAL</h3>
-          <p>Alicante</p>
-        </div>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- ESTUDIO -->
-
-  <section class="studio" id="estudio">
-
-    <div class="studio-content">
-
-      <p class="section-label">
-        EL ESTUDIO
+    <section class="studio" id="estudio">
+      <p class="eyebrow">EL ESTUDIO</p>
+      <h2>INTERIORISMO SERENO, ELEGANTE Y PERSONAL.</h2>
+      <p class="studio-text">
+        En NUR INTERIORES desarrollamos proyectos residenciales y espacios
+        con una estética depurada, cálida y atemporal. Trabajamos desde la
+        distribución hasta la selección de acabados, iluminación, mobiliario
+        y decoración para construir interiores coherentes y con alma.
       </p>
+    </section>
 
-      <h2>
-        INTERIORISMO SERENO,<br>
-        FUNCIONAL Y PERSONAL.
-      </h2>
-
-      <p class="studio-description">
-        En NUR INTERIORES creamos espacios pensados para las personas
-        que los habitan. Cada proyecto nace del equilibrio entre
-        funcionalidad, materiales, luz y una estética atemporal.
+    <section class="contact" id="contacto">
+      <p class="eyebrow">CONTACTO</p>
+      <h2>¿HABLAMOS DE TU PROYECTO?</h2>
+      <p>
+        Escríbenos y cuéntanos qué espacio quieres transformar.
       </p>
+      <a href="mailto:hola@interioresnur.com" class="button olive">CONTACTAR</a>
+    </section>
 
-      <p class="studio-description">
-        Trabajamos desde la distribución del espacio hasta la selección
-        de materiales, iluminación, mobiliario y decoración para conseguir
-        interiores coherentes, cálidos y personales.
-      </p>
+  </main>
 
-      <a href="#contacto" class="text-link">
-        CONOCER EL ESTUDIO →
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- FILOSOFÍA -->
-
-  <section class="philosophy">
-
-    <p class="section-label">
-      NUESTRA FORMA DE ENTENDER EL INTERIORISMO
-    </p>
-
-    <h2>
-      LUZ · MATERIA · CALMA · NATURALEZA
-    </h2>
-
-  </section>
-
-
-  <!-- CONTACTO -->
-
-  <section class="contact" id="contacto">
-
-    <p class="section-label">
-      CONTACTO
-    </p>
-
-    <h2>
-      ¿HABLAMOS DE TU PROYECTO?
-    </h2>
-
-    <p>
-      Cuéntanos qué espacio quieres transformar.
-    </p>
-
-    <a href="mailto:hola@interioresnur.com" class="button olive">
-      CONTACTAR
-    </a>
-
-  </section>
-
-
-  <!-- PIE DE PÁGINA -->
-
-  <footer>
-
+  <footer class="site-footer">
     <div class="footer-brand">
-      <span class="footer-nur">NUR</span>
-      <span>INTERIORES</span>
+      <span class="brand-main footer-main">NUR</span>
+      <span class="brand-sub footer-sub">INTERIORES</span>
     </div>
 
-    <div class="footer-info">
+    <div class="footer-links">
       <p>ESTUDIO DE INTERIORISMO</p>
       <p>VALENCIA</p>
     </div>
@@ -216,9 +151,7 @@
     <div class="footer-copy">
       <p>© 2026 NUR INTERIORES</p>
     </div>
-
   </footer>
 
 </body>
-
 </html>
