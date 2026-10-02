@@ -1,28 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap');
 
-
-/* ------------------------------
-   IDENTIDAD NUR
------------------------------- */
-
 :root {
-
-  --marfil: #F4F0E8;
-  --arena: #D8CCBC;
-  --piedra: #AAA092;
-
-  --oliva: #727553;
-  --oliva-oscuro: #4F543A;
-
-  --carbon: #252420;
-  --blanco: #FBF8F2;
-
+  --walnut: #4A3224;
+  --limewash: #C9C0B4;
+  --olive: #4F543A;
+  --olive-soft: #727553;
+  --ivory: #F5F1EA;
+  --warm-white: #FBF8F2;
+  --charcoal: #1E1C19;
+  --stone: #9C9388;
+  --border: rgba(30, 28, 25, 0.12);
 }
-
-
-/* ------------------------------
-   GENERAL
------------------------------- */
 
 * {
   box-sizing: border-box;
@@ -33,694 +21,490 @@ html {
 }
 
 body {
-
   margin: 0;
-
-  background-color: var(--marfil);
-  color: var(--carbon);
-
+  background: var(--ivory);
+  color: var(--charcoal);
   font-family: "Manrope", sans-serif;
-
   font-weight: 300;
-
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
 
-/* ------------------------------
-   CABECERA
------------------------------- */
+/* HEADER */
 
-.navbar {
-
-  height: 110px;
-
+.site-header {
+  height: 96px;
+  padding: 0 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 0 6%;
-
-  background: var(--marfil);
-
+  border-bottom: 1px solid var(--border);
+  background: var(--warm-white);
 }
 
-
-/* LOGO */
-
-.logo {
-
+.brand {
   display: flex;
   flex-direction: column;
-
-  text-decoration: none;
-
-  color: var(--oliva-oscuro);
-
   line-height: 1;
-
 }
 
-.logo-nur {
-
+.brand-main {
   font-family: "Cormorant Garamond", serif;
-
-  font-size: 44px;
+  font-size: 42px;
   font-weight: 500;
-
-  letter-spacing: 0.05em;
-
+  letter-spacing: 0.04em;
+  color: var(--charcoal);
 }
 
-.logo-interiores {
-
-  margin-top: 5px;
-
+.brand-sub {
+  margin-top: 4px;
   font-size: 8px;
-
-  letter-spacing: 0.55em;
-
+  letter-spacing: 0.45em;
+  color: var(--olive-soft);
 }
 
-
-/* MENU */
-
-nav {
-
+.main-nav {
   display: flex;
-
-  gap: 38px;
-
+  gap: 34px;
 }
 
-nav a {
-
-  position: relative;
-
-  text-decoration: none;
-
+.main-nav a {
   font-size: 10px;
   font-weight: 500;
-
   letter-spacing: 0.22em;
-
 }
 
-nav a::after {
+/* GENERALES */
 
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  bottom: -8px;
-
-  width: 0;
-  height: 1px;
-
-  background: var(--oliva);
-
-  transition: width 0.3s ease;
-
-}
-
-nav a:hover::after {
-
-  width: 100%;
-
-}
-
-
-/* ------------------------------
-   PORTADA
------------------------------- */
-
-.hero {
-
-  min-height: calc(100vh - 110px);
-
-  display: flex;
-  align-items: center;
-
-  padding: 8%;
-
-  background:
-
-    linear-gradient(
-      90deg,
-      rgba(33, 31, 25, 0.30),
-      rgba(33, 31, 25, 0.05)
-    ),
-
-    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90");
-
-  background-size: cover;
-  background-position: center;
-
-}
-
-.hero-content {
-
-  max-width: 1000px;
-
-  color: var(--blanco);
-
-}
-
-.section-label {
-
-  margin-bottom: 25px;
-
+.eyebrow {
   font-size: 10px;
   font-weight: 500;
-
-  letter-spacing: 0.32em;
-
+  letter-spacing: 0.30em;
   text-transform: uppercase;
-
+  margin-bottom: 20px;
+  color: var(--olive-soft);
 }
 
-.hero h1 {
-
-  max-width: 1000px;
-
-  margin: 0 0 30px;
-
+h1, h2, h3 {
   font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(55px, 7vw, 110px);
-
   font-weight: 400;
-
-  line-height: 0.90;
-
-  letter-spacing: 0.01em;
-
+  margin: 0;
 }
-
-.hero-text {
-
-  max-width: 520px;
-
-  margin-bottom: 40px;
-
-  font-size: 16px;
-
-  line-height: 1.8;
-
-}
-
-
-/* ------------------------------
-   BOTONES
------------------------------- */
 
 .button {
-
   display: inline-block;
-
-  padding: 17px 28px;
-
-  background: var(--blanco);
-
-  color: var(--carbon);
-
-  text-decoration: none;
-
-  font-size: 9px;
+  padding: 16px 28px;
+  background: var(--charcoal);
+  color: var(--warm-white);
+  font-size: 10px;
   font-weight: 600;
-
-  letter-spacing: 0.25em;
-
-  transition: all 0.3s ease;
-
+  letter-spacing: 0.22em;
+  transition: 0.3s ease;
 }
 
 .button:hover {
-
-  background: var(--oliva);
-  color: var(--blanco);
-
+  background: var(--olive);
 }
 
 .button.olive {
-
-  background: var(--oliva);
-  color: var(--blanco);
-
+  background: var(--olive);
 }
 
 .button.olive:hover {
-
-  background: var(--oliva-oscuro);
-
-}
-
-
-/* ------------------------------
-   PROYECTOS
------------------------------- */
-
-.projects {
-
-  padding: 130px 6% 160px;
-
-  background: var(--marfil);
-
-}
-
-.section-heading {
-
-  margin-bottom: 65px;
-
-}
-
-.section-heading h2 {
-
-  margin: 0;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(45px, 5vw, 75px);
-
-  font-weight: 400;
-
-  line-height: 1;
-
-}
-
-.project-grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 24px;
-
-}
-
-.project-card {
-
-  cursor: pointer;
-
-}
-
-.project-image {
-
-  height: 540px;
-
-  position: relative;
-
-  overflow: hidden;
-
-  background-size: cover;
-  background-position: center;
-
-  transition: transform 0.5s ease;
-
-}
-
-.project-card:hover .project-image {
-
-  transform: scale(0.99);
-
-}
-
-.project-number {
-
-  position: absolute;
-
-  bottom: 20px;
-  left: 20px;
-
-  color: var(--blanco);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 42px;
-
-}
-
-.project1 {
-
-  background-image:
-    url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85");
-
-}
-
-.project2 {
-
-  background-image:
-    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85");
-
-}
-
-.project3 {
-
-  background-image:
-    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85");
-
-}
-
-.project-info {
-
-  padding-top: 20px;
-
-}
-
-.project-info h3 {
-
-  margin: 0 0 7px;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 25px;
-
-  font-weight: 500;
-
-  letter-spacing: 0.04em;
-
-}
-
-.project-info p {
-
-  margin: 0;
-
-  color: #757068;
-
-  font-size: 11px;
-
-  letter-spacing: 0.12em;
-
-}
-
-
-/* ------------------------------
-   ESTUDIO
------------------------------- */
-
-.studio {
-
-  min-height: 800px;
-
-  display: flex;
-  align-items: center;
-
-  padding: 10% 8%;
-
-  background: var(--arena);
-
-}
-
-.studio-content {
-
-  max-width: 900px;
-
-}
-
-.studio h2 {
-
-  margin: 0 0 45px;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(45px, 6vw, 85px);
-
-  font-weight: 400;
-
-  line-height: 0.95;
-
-}
-
-.studio-description {
-
-  max-width: 650px;
-
-  font-size: 15px;
-
-  line-height: 1.9;
-
+  background: var(--walnut);
 }
 
 .text-link {
-
-  display: inline-block;
-
-  margin-top: 35px;
-
-  color: var(--oliva-oscuro);
-
-  text-decoration: none;
-
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
-
-  letter-spacing: 0.25em;
-
-  border-bottom: 1px solid var(--oliva);
-
-  padding-bottom: 8px;
-
+  letter-spacing: 0.20em;
+  color: var(--olive);
 }
 
+.text-link.light {
+  color: var(--warm-white);
+}
 
-/* ------------------------------
-   FILOSOFÍA
------------------------------- */
+/* HERO */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  min-height: calc(100vh - 96px);
+  background: var(--warm-white);
+}
+
+.hero-text {
+  padding: 8% 8% 8% 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: clamp(52px, 7vw, 98px);
+  line-height: 0.94;
+  margin-bottom: 30px;
+}
+
+.hero-description {
+  max-width: 500px;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 36px;
+  color: #4f4a43;
+}
+
+.hero-image {
+  background-image: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  min-height: 620px;
+}
+
+/* INTRO BLOCK */
+
+.intro-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 90px 7%;
+  background: var(--ivory);
+}
+
+.intro-left h2 {
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1.05;
+  max-width: 460px;
+}
+
+.intro-right {
+  display: flex;
+  align-items: end;
+}
+
+.intro-right p {
+  max-width: 480px;
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+/* PROJECTS */
+
+.projects {
+  padding: 110px 7%;
+  background: var(--warm-white);
+}
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 55px;
+}
+
+.section-head h2 {
+  font-size: clamp(36px, 4vw, 62px);
+  line-height: 1;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  display: block;
+}
+
+.project-image {
+  height: 430px;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-1 {
+  background-image: url("https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1200&q=80");
+}
+
+.project-2 {
+  background-image: url("https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80");
+}
+
+.project-3 {
+  background-image: url("https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80");
+}
+
+.project-info {
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.project-number {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--olive);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+}
+
+.project-info h3 {
+  font-size: 28px;
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+}
+
+.project-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #6c675f;
+  letter-spacing: 0.08em;
+}
+
+/* PHILOSOPHY */
 
 .philosophy {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  min-height: 500px;
+  background: var(--charcoal);
+  color: var(--warm-white);
+}
 
-  padding: 150px 6%;
-
-  text-align: center;
-
-  background: var(--oliva-oscuro);
-
-  color: var(--blanco);
-
+.philosophy-text {
+  padding: 90px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .philosophy h2 {
-
-  max-width: 1000px;
-
-  margin: 30px auto 0;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(40px, 5vw, 70px);
-
-  font-weight: 400;
-
-  letter-spacing: 0.04em;
-
+  font-size: clamp(38px, 4vw, 64px);
+  margin-bottom: 24px;
 }
 
+.philosophy p:not(.eyebrow) {
+  max-width: 420px;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
 
-/* ------------------------------
-   CONTACTO
------------------------------- */
+.philosophy-image {
+  background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+/* STUDIO */
+
+.studio {
+  padding: 110px 7%;
+  background: var(--limewash);
+}
+
+.studio h2 {
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: 1;
+  max-width: 900px;
+  margin-bottom: 28px;
+}
+
+.studio-text {
+  max-width: 680px;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+/* CONTACT */
 
 .contact {
-
-  padding: 170px 6%;
-
+  padding: 130px 7%;
   text-align: center;
-
-  background: var(--marfil);
-
+  background: var(--ivory);
 }
 
 .contact h2 {
-
-  margin: 10px 0 25px;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(50px, 6vw, 90px);
-
-  font-weight: 400;
-
+  font-size: clamp(42px, 5vw, 72px);
+  margin-bottom: 18px;
 }
 
-.contact > p:not(.section-label) {
-
-  margin-bottom: 40px;
-
+.contact p {
   font-size: 15px;
-
+  line-height: 1.8;
+  margin-bottom: 30px;
 }
 
+/* FOOTER */
 
-/* ------------------------------
-   FOOTER
------------------------------- */
-
-footer {
-
-  min-height: 200px;
-
+.site-footer {
   display: grid;
-
   grid-template-columns: 1fr 1fr 1fr;
-
   align-items: center;
-
-  padding: 50px 6%;
-
-  background: var(--carbon);
-
-  color: var(--blanco);
-
+  gap: 20px;
+  padding: 40px 5%;
+  background: var(--warm-white);
+  border-top: 1px solid var(--border);
 }
 
-.footer-brand {
-
-  display: flex;
-
-  flex-direction: column;
-
-  font-size: 7px;
-
-  letter-spacing: 0.45em;
-
+.footer-main {
+  font-size: 34px;
 }
 
-.footer-nur {
-
-  margin-bottom: 4px;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 38px;
-
-  letter-spacing: 0.06em;
-
+.footer-links,
+.footer-copy {
+  font-size: 10px;
+  letter-spacing: 0.18em;
 }
 
-.footer-info {
-
+.footer-links {
   text-align: center;
-
-  font-size: 8px;
-
-  letter-spacing: 0.22em;
-
 }
 
 .footer-copy {
-
   text-align: right;
-
-  font-size: 8px;
-
-  letter-spacing: 0.15em;
-
 }
 
+/* PROJECT DETAIL PAGE */
 
-/* ------------------------------
-   MÓVIL
------------------------------- */
+.project-page {
+  background: var(--ivory);
+}
 
-@media (max-width: 800px) {
+.project-hero {
+  padding: 80px 7% 40px;
+  background: var(--warm-white);
+}
 
-  .navbar {
+.project-topline {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  color: var(--olive);
+  margin-bottom: 18px;
+}
 
-    height: 90px;
+.project-hero h1 {
+  font-size: clamp(48px, 6vw, 86px);
+  line-height: 0.95;
+  margin-bottom: 18px;
+}
 
-    padding: 0 5%;
+.project-subtitle {
+  font-size: 14px;
+  letter-spacing: 0.10em;
+  color: #5e584f;
+}
 
-  }
+.project-cover {
+  height: 70vh;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+}
 
-  .logo-nur {
+.project-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  padding: 90px 7%;
+}
 
-    font-size: 34px;
+.project-description h2 {
+  font-size: clamp(34px, 4vw, 60px);
+  margin-bottom: 24px;
+}
 
-  }
+.project-description p {
+  font-size: 15px;
+  line-height: 1.95;
+  max-width: 700px;
+}
 
-  nav {
+.project-meta {
+  border-left: 1px solid var(--border);
+  padding-left: 35px;
+}
 
+.project-meta-block {
+  margin-bottom: 28px;
+}
+
+.project-meta-block span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--olive-soft);
+  margin-bottom: 8px;
+}
+
+.project-meta-block p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 0 7% 100px;
+}
+
+.project-gallery .large {
+  grid-column: span 2;
+}
+
+.project-gallery div {
+  min-height: 280px;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-nav {
+  padding: 0 7% 80px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .main-nav {
     display: none;
-
   }
 
-
-  .hero {
-
-    min-height: calc(100vh - 90px);
-
-    padding: 12% 7%;
-
-  }
-
-  .hero h1 {
-
-    font-size: 52px;
-
-  }
-
-
-  .projects {
-
-    padding: 90px 6%;
-
+  .hero,
+  .intro-block,
+  .philosophy,
+  .project-layout {
+    grid-template-columns: 1fr;
   }
 
   .project-grid {
-
     grid-template-columns: 1fr;
-
-    gap: 55px;
-
   }
 
-  .project-image {
-
-    height: 500px;
-
-  }
-
-
-  .studio {
-
-    min-height: auto;
-
-    padding: 100px 7%;
-
-  }
-
-
-  .philosophy {
-
-    padding: 100px 7%;
-
-  }
-
-
-  .contact {
-
-    padding: 110px 7%;
-
-  }
-
-
-  footer {
-
+  .site-footer {
     grid-template-columns: 1fr;
-
-    gap: 40px;
-
   }
 
-  .footer-info,
+  .footer-links,
   .footer-copy {
-
     text-align: left;
-
   }
 
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery .large {
+    grid-column: span 1;
+  }
 }
