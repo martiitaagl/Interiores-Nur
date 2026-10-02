@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap');
+
+
+/* ------------------------------
+   IDENTIDAD NUR
+------------------------------ */
+
+:root {
+
+  --marfil: #F4F0E8;
+  --arena: #D8CCBC;
+  --piedra: #AAA092;
+
+  --oliva: #727553;
+  --oliva-oscuro: #4F543A;
+
+  --carbon: #252420;
+  --blanco: #FBF8F2;
+
+}
+
+
+/* ------------------------------
+   GENERAL
+------------------------------ */
+
 * {
   box-sizing: border-box;
 }
@@ -7,250 +33,694 @@ html {
 }
 
 body {
+
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #222;
-  background: #f4f1eb;
+
+  background-color: var(--marfil);
+  color: var(--carbon);
+
+  font-family: "Manrope", sans-serif;
+
+  font-weight: 300;
+
+}
+
+a {
+  color: inherit;
+}
+
+
+/* ------------------------------
+   CABECERA
+------------------------------ */
+
+.navbar {
+
+  height: 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background: var(--marfil);
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+
+  color: var(--oliva-oscuro);
+
+  line-height: 1;
+
+}
+
+.logo-nur {
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 44px;
+  font-weight: 500;
+
+  letter-spacing: 0.05em;
+
+}
+
+.logo-interiores {
+
+  margin-top: 5px;
+
+  font-size: 8px;
+
+  letter-spacing: 0.55em;
+
 }
 
 
 /* MENU */
 
-.navbar {
-  height: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 6%;
-  background: #f4f1eb;
-}
-
-.logo {
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
 nav {
+
   display: flex;
-  gap: 35px;
+
+  gap: 38px;
+
 }
 
 nav a {
+
+  position: relative;
+
   text-decoration: none;
-  color: #222;
-  font-size: 14px;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.22em;
+
+}
+
+nav a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--oliva);
+
+  transition: width 0.3s ease;
+
+}
+
+nav a:hover::after {
+
+  width: 100%;
+
 }
 
 
-/* HERO */
+/* ------------------------------
+   PORTADA
+------------------------------ */
 
 .hero {
-  min-height: 85vh;
+
+  min-height: calc(100vh - 110px);
+
   display: flex;
   align-items: center;
+
   padding: 8%;
 
   background:
+
     linear-gradient(
-      rgba(0,0,0,0.18),
-      rgba(0,0,0,0.18)
+      90deg,
+      rgba(33, 31, 25, 0.30),
+      rgba(33, 31, 25, 0.05)
     ),
-    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85");
+
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90");
 
   background-size: cover;
   background-position: center;
+
 }
 
 .hero-content {
-  max-width: 850px;
-  color: white;
+
+  max-width: 1000px;
+
+  color: var(--blanco);
+
 }
 
-.subtitle {
-  font-size: 13px;
-  letter-spacing: 3px;
+.section-label {
+
   margin-bottom: 25px;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.32em;
+
+  text-transform: uppercase;
+
 }
 
 .hero h1 {
-  font-size: clamp(55px, 7vw, 105px);
-  line-height: 0.95;
+
+  max-width: 1000px;
+
   margin: 0 0 30px;
-  font-weight: 500;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(55px, 7vw, 110px);
+
+  font-weight: 400;
+
+  line-height: 0.90;
+
+  letter-spacing: 0.01em;
+
 }
 
 .hero-text {
-  font-size: 20px;
+
+  max-width: 520px;
+
   margin-bottom: 40px;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
 }
 
 
-/* BOTONES */
+/* ------------------------------
+   BOTONES
+------------------------------ */
 
 .button {
+
   display: inline-block;
-  padding: 15px 28px;
-  background: white;
-  color: #222;
+
+  padding: 17px 28px;
+
+  background: var(--blanco);
+
+  color: var(--carbon);
+
   text-decoration: none;
-  font-size: 14px;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 0.25em;
+
+  transition: all 0.3s ease;
+
 }
 
-.button.dark {
-  background: #222;
-  color: white;
+.button:hover {
+
+  background: var(--oliva);
+  color: var(--blanco);
+
+}
+
+.button.olive {
+
+  background: var(--oliva);
+  color: var(--blanco);
+
+}
+
+.button.olive:hover {
+
+  background: var(--oliva-oscuro);
+
 }
 
 
-/* PROYECTOS */
+/* ------------------------------
+   PROYECTOS
+------------------------------ */
 
 .projects {
-  padding: 120px 6%;
+
+  padding: 130px 6% 160px;
+
+  background: var(--marfil);
+
 }
 
-.section-small {
-  font-size: 12px;
-  letter-spacing: 3px;
+.section-heading {
+
+  margin-bottom: 65px;
+
 }
 
-.projects h2,
-.studio h2,
-.contact h2 {
-  font-size: clamp(38px, 5vw, 70px);
+.section-heading h2 {
+
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(45px, 5vw, 75px);
+
   font-weight: 400;
-  margin-top: 15px;
+
+  line-height: 1;
+
 }
 
 .project-grid {
-  margin-top: 60px;
+
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+
+  gap: 24px;
+
 }
 
-.project {
-  height: 550px;
+.project-card {
+
+  cursor: pointer;
+
+}
+
+.project-image {
+
+  height: 540px;
+
+  position: relative;
+
+  overflow: hidden;
+
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: flex-end;
-  padding: 25px;
-  color: white;
+
+  transition: transform 0.5s ease;
+
 }
 
-.project h3 {
-  font-size: 24px;
-  margin-bottom: 5px;
+.project-card:hover .project-image {
+
+  transform: scale(0.99);
+
 }
 
-.project p {
-  margin: 0;
+.project-number {
+
+  position: absolute;
+
+  bottom: 20px;
+  left: 20px;
+
+  color: var(--blanco);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 42px;
+
 }
 
 .project1 {
+
   background-image:
-    linear-gradient(
-      transparent,
-      rgba(0,0,0,.45)
-    ),
-    url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80");
+    url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85");
+
 }
 
 .project2 {
+
   background-image:
-    linear-gradient(
-      transparent,
-      rgba(0,0,0,.45)
-    ),
-    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80");
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85");
+
 }
 
 .project3 {
+
   background-image:
-    linear-gradient(
-      transparent,
-      rgba(0,0,0,.45)
-    ),
-    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80");
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85");
+
+}
+
+.project-info {
+
+  padding-top: 20px;
+
+}
+
+.project-info h3 {
+
+  margin: 0 0 7px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+
+}
+
+.project-info p {
+
+  margin: 0;
+
+  color: #757068;
+
+  font-size: 11px;
+
+  letter-spacing: 0.12em;
+
 }
 
 
-/* ESTUDIO */
+/* ------------------------------
+   ESTUDIO
+------------------------------ */
 
 .studio {
-  min-height: 700px;
+
+  min-height: 800px;
+
   display: flex;
   align-items: center;
-  padding: 8%;
-  background: #d8d0c4;
+
+  padding: 10% 8%;
+
+  background: var(--arena);
+
 }
 
-.studio-text {
-  max-width: 850px;
+.studio-content {
+
+  max-width: 900px;
+
 }
 
-.studio-text > p:last-child {
+.studio h2 {
+
+  margin: 0 0 45px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(45px, 6vw, 85px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+}
+
+.studio-description {
+
   max-width: 650px;
-  font-size: 18px;
-  line-height: 1.7;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+}
+
+.text-link {
+
+  display: inline-block;
+
+  margin-top: 35px;
+
+  color: var(--oliva-oscuro);
+
+  text-decoration: none;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 0.25em;
+
+  border-bottom: 1px solid var(--oliva);
+
+  padding-bottom: 8px;
+
 }
 
 
-/* CONTACTO */
+/* ------------------------------
+   FILOSOFÍA
+------------------------------ */
+
+.philosophy {
+
+  padding: 150px 6%;
+
+  text-align: center;
+
+  background: var(--oliva-oscuro);
+
+  color: var(--blanco);
+
+}
+
+.philosophy h2 {
+
+  max-width: 1000px;
+
+  margin: 30px auto 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(40px, 5vw, 70px);
+
+  font-weight: 400;
+
+  letter-spacing: 0.04em;
+
+}
+
+
+/* ------------------------------
+   CONTACTO
+------------------------------ */
 
 .contact {
-  padding: 150px 6%;
+
+  padding: 170px 6%;
+
   text-align: center;
-  background: #f4f1eb;
+
+  background: var(--marfil);
+
 }
 
-.contact p {
-  font-size: 18px;
+.contact h2 {
+
+  margin: 10px 0 25px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(50px, 6vw, 90px);
+
+  font-weight: 400;
+
 }
 
-.contact .button {
-  margin-top: 30px;
+.contact > p:not(.section-label) {
+
+  margin-bottom: 40px;
+
+  font-size: 15px;
+
 }
 
 
-/* FOOTER */
+/* ------------------------------
+   FOOTER
+------------------------------ */
 
 footer {
+
+  min-height: 200px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+
+  padding: 50px 6%;
+
+  background: var(--carbon);
+
+  color: var(--blanco);
+
+}
+
+.footer-brand {
+
   display: flex;
-  justify-content: space-between;
-  padding: 35px 6%;
-  background: #222;
-  color: white;
-  font-size: 13px;
+
+  flex-direction: column;
+
+  font-size: 7px;
+
+  letter-spacing: 0.45em;
+
+}
+
+.footer-nur {
+
+  margin-bottom: 4px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 38px;
+
+  letter-spacing: 0.06em;
+
+}
+
+.footer-info {
+
+  text-align: center;
+
+  font-size: 8px;
+
+  letter-spacing: 0.22em;
+
+}
+
+.footer-copy {
+
+  text-align: right;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
 }
 
 
-/* MOVIL */
+/* ------------------------------
+   MÓVIL
+------------------------------ */
 
 @media (max-width: 800px) {
 
-  nav {
-    display: none;
+  .navbar {
+
+    height: 90px;
+
+    padding: 0 5%;
+
   }
 
+  .logo-nur {
+
+    font-size: 34px;
+
+  }
+
+  nav {
+
+    display: none;
+
+  }
+
+
   .hero {
-    min-height: 75vh;
+
+    min-height: calc(100vh - 90px);
+
+    padding: 12% 7%;
+
   }
 
   .hero h1 {
+
     font-size: 52px;
+
+  }
+
+
+  .projects {
+
+    padding: 90px 6%;
+
   }
 
   .project-grid {
+
     grid-template-columns: 1fr;
+
+    gap: 55px;
+
   }
 
-  .project {
-    height: 450px;
+  .project-image {
+
+    height: 500px;
+
   }
+
+
+  .studio {
+
+    min-height: auto;
+
+    padding: 100px 7%;
+
+  }
+
+
+  .philosophy {
+
+    padding: 100px 7%;
+
+  }
+
+
+  .contact {
+
+    padding: 110px 7%;
+
+  }
+
 
   footer {
-    flex-direction: column;
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
   }
+
+  .footer-info,
+  .footer-copy {
+
+    text-align: left;
+
+  }
+
 }
